@@ -10,6 +10,7 @@ import { ListaService } from 'src/app/services/lista.service';
 export class HomeComponent implements OnInit {
 
   input!:any[];
+ 
   constructor(private router:Router, private route:ActivatedRoute, public Services: ListaService) { }
 
   ngOnInit(): void {
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   editar(id:string){
+    
     this.router.navigate(['/detalle', id])
   }
 
