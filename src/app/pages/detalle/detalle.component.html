@@ -1,0 +1,31 @@
+<div class="w-[50%] mx-auto bg-slate-50 shadow-lg shadow-gray-400 rounded p-5">
+    <div *ngFor="let data of input" 
+    class="mt-10 px-[2rem] ">
+        <div *ngIf="data.id == id">
+          <div>
+            <h2 class="text-lg font-bold text-center py-4 border-b-8 border-violet-300">EL ID ES: <span class="text-xl font-bold text-red-500">{{id}}</span></h2>
+          </div>
+          <div class="my-2">
+            <label for="cod" class="font-medium">Codigo de Usuario</label>
+            <input type="text" id="cod" value="{{data.userId}}" class="text-gray-500 block" disabled>
+          </div>
+          <div class="my-2">
+            <p class="font-medium">ID</p>
+            <p class="text-gray-500">{{data.id}}</p>
+          </div>
+          
+          <div class="my-2">
+            <p class="font-medium">TITULO</p>
+            <p class="text-gray-500">{{data.title}}</p>
+          </div>
+
+          <div class="my-2">
+            <p class="font-medium">STATUS</p>
+            <p class="text-gray-500">{{data.completed}}</p>
+          </div>
+        </div>
+    </div>
+</div>
+    
+    
+
